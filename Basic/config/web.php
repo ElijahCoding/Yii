@@ -52,6 +52,9 @@ $config = [
             'rules' => [
             ],
         ],
+        'assetManager' => [
+            'appendTimestamp' => true
+        ]
     ],
     'params' => $params,
     'on beforeRequest' => function() {
