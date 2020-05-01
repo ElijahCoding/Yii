@@ -2,7 +2,9 @@
 
 namespace app\components;
 
-class AssetManager
-{
+use yii\web\AssetManager as BaseAssetManager;
 
+class AssetManager extends BaseAssetManager
+{
+    public $appendTimestamp = true;
 }
