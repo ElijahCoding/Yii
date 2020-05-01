@@ -9,7 +9,7 @@ $config = [
     'language' => 'en',
 //    'defaultRoute' => '',
     'layout' => 'main',
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'test'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -54,14 +54,20 @@ $config = [
         ],
         'assetManager' => [
             'class' => 'app\components\AssetManager'
+        ],
+        'test' => [
+//            'class' => 'app\components\TestComponent'
+            'class' => function() {
+                return\app\components\TestComponent();
+            }
         ]
     ],
     'params' => $params,
-    'on beforeRequest' => function() {
-        echo '<pre><br><br>';
-            var_dump('from before request');
-        echo '</pre>';
-    }
+//    'on beforeRequest' => function() {
+//        echo '<pre><br><br>';
+//            var_dump('from before request');
+//        echo '</pre>';
+//    }
 ];
 
 if (YII_ENV_DEV) {
