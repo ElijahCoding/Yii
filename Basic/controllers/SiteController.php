@@ -61,9 +61,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        echo '<pre>';
-        var_dump(Yii::$app->test);
-        echo '</pre>';
         return $this->render('index');
     }
 

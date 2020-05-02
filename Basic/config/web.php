@@ -9,7 +9,7 @@ $config = [
     'language' => 'en',
 //    'defaultRoute' => '',
     'layout' => 'main',
-    'bootstrap' => ['log', 'test'],
+    'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -55,12 +55,12 @@ $config = [
         'assetManager' => [
             'class' => 'app\components\AssetManager'
         ],
-        'test' => [
+//        'test' => [
 //            'class' => 'app\components\TestComponent'
-            'class' => function() {
-                return\app\components\TestComponent();
-            }
-        ]
+//            'class' => function() {
+//                return \app\components\TestComponent();
+//            }
+//        ]
     ],
     'params' => $params,
 //    'on beforeRequest' => function() {
